@@ -54,21 +54,21 @@ let token = "Bearer " + localStorage.getItem("jwt")
       })
     },
     getUser() {
-      return axios.get("http://localhost:3000/profile", { params:{}, headers: { 'Authorization': token } })
+      return axios.get("https://final-project-rails.herokuapp.com/profile", { params:{}, headers: { 'Authorization': token } })
     },
     itemCart(title, page, index) {
-      return axios.post("http://localhost:3000/itemcart", {title: title, page:page, index:index}, {headers:{"Authorization": "Bearer " + localStorage.getItem("jwt")}})
+      return axios.post("https://final-project-rails.herokuapp.com/itemcart", {title: title, page:page, index:index}, {headers:{"Authorization": "Bearer " + localStorage.getItem("jwt")}})
     },
     itemWish(title, page, index) {
-      return axios.post("http://localhost:3000/itemwish", {title: title, page:page, index:index}, {headers:{"Authorization": "Bearer " + localStorage.getItem("jwt")}})
+      return axios.post("https://final-project-rails.herokuapp.com/itemwish", {title: title, page:page, index:index}, {headers:{"Authorization": "Bearer " + localStorage.getItem("jwt")}})
     },
     wishDelete(title, page, index) {
-      return axios.post("http://localhost:3000/itemwishdelete", {title: title, page:page, index:index}, {headers:{"Authorization": "Bearer " + localStorage.getItem("jwt")}})
+      return axios.post("https://final-project-rails.herokuapp.com/itemwishdelete", {title: title, page:page, index:index}, {headers:{"Authorization": "Bearer " + localStorage.getItem("jwt")}})
     },
     cartDelete(title, page, index) {
-      return axios.post("http://localhost:3000/itemcartdelete", {title: title, page:page, index:index}, {headers:{"Authorization": "Bearer " + localStorage.getItem("jwt")}})
+      return axios.post("https://final-project-rails.herokuapp.com/itemcartdelete", {title: title, page:page, index:index}, {headers:{"Authorization": "Bearer " + localStorage.getItem("jwt")}})
     },
     cartEmpty() {
-      return axios.post("http://localhost:3000/emptycart", { params:{}, headers: { 'Authorization': token } })
+      return axios.post("https://final-project-rails.herokuapp.com/emptycart", {}, {headers:{"Authorization": "Bearer " + localStorage.getItem("jwt")}})
     }
   }

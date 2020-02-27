@@ -8,7 +8,7 @@ class Login extends React.Component {
     render: false
   }
   login = () => {
-    axios.post("http://localhost:3000/user_token", {auth: {email: this.state.email, password: this.state.password}})
+    axios.post("https://final-project-rails.herokuapp.com/user_token", {auth: {email: this.state.email, password: this.state.password}})
     .then(res => {
       localStorage.setItem("jwt", res.data.jwt)
       this.setState({render: true})

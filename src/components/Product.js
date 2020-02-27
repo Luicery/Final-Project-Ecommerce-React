@@ -37,6 +37,30 @@ function Product(props) {
     }
     return false
   }
+  function removeWishList() {
+    requests.wishDelete(props.match.params.product, props.match.params.page, props.match.params.index)
+    .then(requests.getUser().then(res => {
+      setUser(res.data)
+    }))
+  }
+  function removeCart() {
+    requests.cartDelete(props.match.params.product, props.match.params.page, props.match.params.index)
+    .then(requests.getUser().then(res => {
+      setUser(res.data)
+    }))
+  }
+  function addWishList() {
+    requests.itemWish(props.match.params.product, props.match.params.page, props.match.params.index)
+    .then(requests.getUser().then(res => {
+      setUser(res.data)
+    }))
+  }
+  function addCart() {
+    requests.itemCart(props.match.params.product, props.match.params.page, props.match.params.index)
+    .then(requests.getUser().then(res => {
+      setUser(res.data)
+    }))
+  }
   return(
     <div id="productDetailFullContainer">
     <img id="fatArrow" onClick={()=> props.history.push(`/search/${props.match.params.product}`)} src={backArrow} height="50" width="70" alt="Go Back"></img>
@@ -45,16 +69,16 @@ function Product(props) {
         <Pictures item={item.Item}/>
         <div><h2>{item.Item.itemName}</h2><br/>
         <div id="productDetailsGenrePrice">
-          <span onClick={() => props.history.push(`search/${genre}`)}>{genre}</span>
+          <span onClick={() => props.history.push(`/search/${genre}`)}>{genre}</span>
         <span id="productDetailPrice">¥{item.Item.itemPrice}</span>
         </div><br/>
         {item.Item.itemCaption}<br/>
         By:{item.Item.shopName}</div>
       </div>
-      <div id="productWishCart">{user !== "" && checkWish() === false && <div onClick={() => requests.itemWish(props.match.params.product, props.match.params.page, props.match.params.index)}>Add to Wishlist</div>}
-      {user !== "" && checkWish() && <div onClick={() => requests.wishDelete(props.match.params.product, props.match.params.page, props.match.params.index)}>Remove From Wishlist</div>}
-      {user !== "" && checkCart() === false && <div onClick={() => requests.itemCart(props.match.params.product, props.match.params.page, props.match.params.index)}>Add to Cart</div>}
-      {user !== "" && checkCart() && <div onClick={() => requests.cartDelete(props.match.params.product, props.match.params.page, props.match.params.index)}>Remove From Cart</div>}
+      <div id="productWishCart">{user !== "" && checkWish() === false && <div onClick={() => addWishList()}>Add to Wishlist</div>}
+      {user !== "" && checkWish() && <div onClick={() => removeWishList()}>Remove From Wishlist</div>}
+      {user !== "" && checkCart() === false && <div onClick={() => addCart()}>Add to Cart</div>}
+      {user !== "" && checkCart() && <div onClick={() => removeCart()}>Remove From Cart</div>}
       {localStorage.jwt === undefined && <div onClick={() => props.history.push("/login")}>Add to Wishlist</div>}
       {localStorage.jwt === undefined && <div onClick={() => props.history.push("/login")}>Add to Cart</div>}
       </div>

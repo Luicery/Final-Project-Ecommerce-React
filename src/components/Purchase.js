@@ -46,7 +46,6 @@ function Purchase(props) {
         <div>Total: ¥{total}</div>
         {total !== 0 && <input id="purchaseSubmit" type="submit" value="Fake Purchase Confirmation" onClick={() => {
           requests.cartEmpty()
-          .then(res => props.history.push(`/purchase`))
         }}></input>}
       </form>
     </div>

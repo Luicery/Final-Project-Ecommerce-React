@@ -23,9 +23,9 @@ class Signup extends React.Component {
         name: this.state.name
       }
     if(this.state.password === this.state.passwordConfirm) {
-      axios.post("http://localhost:3000/users", {user})
+      axios.post("https://final-project-rails.herokuapp.com/users", {user})
       .then(res => {
-        axios.post("http://localhost:3000/user_token", {auth: {email: this.state.email, password: this.state.password}})
+        axios.post("https://final-project-rails.herokuapp.com/user_token", {auth: {email: this.state.email, password: this.state.password}})
         .then(res => {
           localStorage.setItem("jwt", res.data.jwt)
           this.setState({render:true})

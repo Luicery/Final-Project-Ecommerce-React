@@ -10,7 +10,6 @@ function Wishlist(props) {
     })
   }, [])
   useEffect(() => {
-    console.log("reached");
     if(user !== "" && user.userstuff.wishlist.length > 0) {
       let userWish = user.userstuff.wishlist;
       for(let i = 0; i < userWish.length;i ++) {
@@ -27,8 +26,6 @@ function Wishlist(props) {
     }
     return false
   }
-  console.log(item);
-  console.log(user);
   return(
     <div id="wishlistContainer">
       <h1>Your wishlist</h1>

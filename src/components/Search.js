@@ -45,7 +45,6 @@ export default Search
 
 const Display = (props) => {
   let itemsDisplay;
-  console.log(props.items);
   if( props.items == "" ) {
     itemsDisplay = <div id="noResults"> There are no results for your search<br/> {props.props.match.params.product}<br/> try something else</div>;
   } else {
