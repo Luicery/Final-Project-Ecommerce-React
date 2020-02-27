@@ -7,7 +7,8 @@ class Signup extends React.Component {
     phone: "",
     address: "",
     password: "",
-    password_confirmation: ""
+    password_confirmation: "",
+    render: false
   }
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
@@ -26,16 +27,19 @@ class Signup extends React.Component {
       .then(res => {
         axios.post("http://localhost:3000/user_token", {auth: {email: this.state.email, password: this.state.password}})
         .then(res => {
-          console.log("Logged in ",res)
           localStorage.setItem("jwt", res.data.jwt)
+          this.setState({render:true})
         })
       })
     } else {
       console.log("Error passwords do not match")
     }
-    this.props.history.push("/")
   }
   render() {
+    if(localStorage.jwt !== undefined) {
+      this.props.history.push("/")
+      window.location.reload(false)
+    }
     return(
       <div>
         <form onSubmit={this.handleSubmit} id="signupForm">

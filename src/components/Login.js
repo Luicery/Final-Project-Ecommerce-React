@@ -4,23 +4,24 @@ import {Link} from 'react-router-dom';
 class Login extends React.Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    render: false
   }
   login = () => {
     axios.post("http://localhost:3000/user_token", {auth: {email: this.state.email, password: this.state.password}})
     .then(res => {
-      console.log("Logged in ",res)
       localStorage.setItem("jwt", res.data.jwt)
+      this.setState({render: true})
     })
-    .catch(err => {
-      console.log("Error ", err)
-    })
-    this.props.history.push('/')
   }
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   }
   render() {
+    if(localStorage.jwt !== undefined) {
+      this.props.history.push('/')
+      window.location.reload(false)
+    }
       return (
         <div className="App"><br/>
           <form id="loginForm">
