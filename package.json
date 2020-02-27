@@ -2,7 +2,7 @@
   "name": "front_end",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://luicery.github.io/Final-Project-Ecommerce-React",
+  "homepage": "https://luicery.github.io/Final-Project-Ecommerce-React/",
   "dependencies": {
     "@google-cloud/translate": "^5.1.6",
     "@testing-library/jest-dom": "^4.2.4",
