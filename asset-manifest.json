@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Final-Project-Ecommerce-React/static/css/main.596bc991.chunk.css",
-    "main.js": "/Final-Project-Ecommerce-React/static/js/main.76490c78.chunk.js",
-    "main.js.map": "/Final-Project-Ecommerce-React/static/js/main.76490c78.chunk.js.map",
+    "main.js": "/Final-Project-Ecommerce-React/static/js/main.af505ced.chunk.js",
+    "main.js.map": "/Final-Project-Ecommerce-React/static/js/main.af505ced.chunk.js.map",
     "runtime-main.js": "/Final-Project-Ecommerce-React/static/js/runtime-main.f2406f41.js",
     "runtime-main.js.map": "/Final-Project-Ecommerce-React/static/js/runtime-main.f2406f41.js.map",
-    "static/js/2.5e98477f.chunk.js": "/Final-Project-Ecommerce-React/static/js/2.5e98477f.chunk.js",
-    "static/js/2.5e98477f.chunk.js.map": "/Final-Project-Ecommerce-React/static/js/2.5e98477f.chunk.js.map",
+    "static/js/2.79d8e2d0.chunk.js": "/Final-Project-Ecommerce-React/static/js/2.79d8e2d0.chunk.js",
+    "static/js/2.79d8e2d0.chunk.js.map": "/Final-Project-Ecommerce-React/static/js/2.79d8e2d0.chunk.js.map",
     "index.html": "/Final-Project-Ecommerce-React/index.html",
-    "precache-manifest.e89a5c824af17a7c4f5472856a5c7760.js": "/Final-Project-Ecommerce-React/precache-manifest.e89a5c824af17a7c4f5472856a5c7760.js",
+    "precache-manifest.5a437470c2c796ff259e8856ab84c5b6.js": "/Final-Project-Ecommerce-React/precache-manifest.5a437470c2c796ff259e8856ab84c5b6.js",
     "service-worker.js": "/Final-Project-Ecommerce-React/service-worker.js",
     "static/css/main.596bc991.chunk.css.map": "/Final-Project-Ecommerce-React/static/css/main.596bc991.chunk.css.map",
-    "static/js/2.5e98477f.chunk.js.LICENSE.txt": "/Final-Project-Ecommerce-React/static/js/2.5e98477f.chunk.js.LICENSE.txt",
+    "static/js/2.79d8e2d0.chunk.js.LICENSE.txt": "/Final-Project-Ecommerce-React/static/js/2.79d8e2d0.chunk.js.LICENSE.txt",
     "static/media/cart.png": "/Final-Project-Ecommerce-React/static/media/cart.1d6032b6.png",
     "static/media/reviewStar.png": "/Final-Project-Ecommerce-React/static/media/reviewStar.5eff2813.png",
     "static/media/reviewStarEmpty.png": "/Final-Project-Ecommerce-React/static/media/reviewStarEmpty.a22110a3.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f2406f41.js",
-    "static/js/2.5e98477f.chunk.js",
+    "static/js/2.79d8e2d0.chunk.js",
     "static/css/main.596bc991.chunk.css",
-    "static/js/main.76490c78.chunk.js"
+    "static/js/main.af505ced.chunk.js"
   ]
 }
